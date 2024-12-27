@@ -31,6 +31,7 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+             background-color: #fad6a5;
         }
 
         .college-card {
