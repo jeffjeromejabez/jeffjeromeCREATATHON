@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TN-COLLEGES</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffefd5; /* Vibrant background color */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .college-card {
+            width: 300px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .college-card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-front {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-back {
+            background: #f4f4f4;
+            transform: rotateY(180deg);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .apply-now {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .apply-now:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        .home-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+
+        .home-container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .home-container a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .home-container a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div class="home-container" id="home">
+    <h1>Welcome to TN Colleges</h1>
+    <a href="#main-content">Click Here</a>
+</div>
+
+<!-- Navigation bar -->
+<nav>
+    <a href="#home" class="icons"><i class="fas fa-home"></i> Home</a>
+    <a href="#about" class="icons"><i class="fas fa-info-circle"></i> About</a>
+    <a href="#contact" class="icons"><i class="fas fa-phone"></i> Contact</a>
+</nav>
+
+<!-- Main content -->
+<div class="content" id="main-content">
+    <div class="college-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="file:///C:/Users/HP/Desktop/anna%20university.jpeg" alt="Anna University">
+                <h2>ANNA UNIVERSITY GUINDY CAMPUS</h2>
+            </div>
+            <div class="card-back">
+                <h2>ANNA UNIVERSITY GUINDY CAMPUS</h2>
+                <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+                <p><strong>Course Fees:</strong> ₹42,000 (1st Year)</p>
+                <p><strong>Placement:</strong> Average Package - ₹50,48,000, Highest Package - ₹100,00,000</p>
+                <p><strong>Ranking:</strong> #20 in India</p>
+                <a href="https://cfa.annauniv.edu/cfa/" class="apply-now" target="_blank">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="college-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="file:///C:/Users/HP/Desktop/psgtech.webp" alt="PSG College">
+                <h2>PSG COLLEGE OF ENGINEERING AND TECHNOLOGY</h2>
+            </div>
+            <div class="card-back">
+                <h2>PSG COLLEGE OF ENGINEERING AND TECHNOLOGY</h2>
+                <p><strong>Location:</strong> Coimbatore, Tamil Nadu</p>
+                <p><strong>Course Fees:</strong> ₹2,42,000 (1st Year)</p>
+                <p><strong>Placement:</strong> Average Package - ₹21,48,000, Highest Package - ₹1,98,00,000</p>
+                <p><strong>Ranking:</strong> #25 in India</p>
+                <a href="https://www.psgtech.edu/admission.php" class="apply-now" target="_blank">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="college-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="file:///C:/Users/HP/Desktop/ssn.jpg" alt="SSN College">
+                <h2>SSN COLLEGE OF ENGINEERING AND TECHNOLOGY</h2>
+            </div>
+            <div class="card-back">
+                <h2>SSN COLLEGE OF ENGINEERING AND TECHNOLOGY</h2>
+                <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+                <p><strong>Course Fees:</strong> ₹3,50,000 (1st Year)</p>
+                <p><strong>Placement:</strong> Average Package - ₹27,48,000, Highest Package - ₹2,98,00,000</p>
+                <p><strong>Ranking:</strong> #26 in India</p>
+                <a href="https://www.ssn.edu.in/admissions/" class="apply-now" target="_blank">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="college-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="file:///C:/Users/HP/Desktop/thiagaraja.jpeg" alt="Thiagarajar College">
+                <h2>THIAGARAJAR COLLEGE OF ENGINEERING</h2>
+            </div>
+            <div class="card-back">
+                <h2>THIAGARAJAR COLLEGE OF ENGINEERING</h2>
+                <p><strong>Location:</strong> Madurai, Tamil Nadu</p>
+                <p><strong>Course Fees:</strong> ₹52,000 (1st Year)</p>
+                <p><strong>Placement:</strong> Average Package - ₹18,48,000, Highest Package - ₹18,00,000</p>
+                <p><strong>Ranking:</strong> #43 in India</p>
+                <a href="https://www.tce.edu/contact" class="apply-now" target="_blank">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="college-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="file:///C:/Users/HP/Desktop/eshwar.png" alt="Sri Eshwar College">
+                <h2>SRI ESHWAR COLLEGE OF ENGINEERING AND TECHNOLOGY</h2>
+            </div>
+            <div class="card-back">
+                <h2>SRI ESHWAR COLLEGE OF ENGINEERING AND TECHNOLOGY</h2>
+                <p><strong>Location:</strong> Coimbatore, Tamil Nadu</p>
+                <p><strong>Course Fees:</strong> ₹1,85,000 (1st Year)</p>
+                <p><strong>Placement:</strong> Average Package - ₹15,48,000, Highest Package - ₹65,00,000</p>
+                <p><strong>Ranking:</strong> #68 in India</p>
+                <a href="https://sece.ac.in/admissions/" class="apply-now" target="_blank">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="about">
+    <h2>About</h2>
+    <p>Made by: Jeff Jerome Jabez J. (LEADER,YOUNG INNOVATORS)</p>
+    <p>Joshua Rubert(CO-LEADER,YOUNG INNOVATORS) </p>
+    <p>Mohammad Asif(MEMBER)</p>
+    <p>Harshad(MEMBER)</p>
+</div>
+
+<!-- Contact Section -->
+<div id="contact">
+    <h2>Contact</h2>
+    <p>For more info: <a href="mailto:jeffj8b2019.2020@gmail.com">jeffj8b2019.2020@gmail.com</a></p>
+    <p><strong>Phone:</strong> 9677766029</p>
+</div>
+
+</body>
+</html>
