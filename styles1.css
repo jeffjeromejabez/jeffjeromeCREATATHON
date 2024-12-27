@@ -28,9 +28,8 @@
  border-radius: 5px;
  font-size: 14px;
  }
- .btn {
+ a{
   text-align:center;
  }
- .btn:hover {
- background-color:rgba(139,0,0);}
+ 
  </style>
